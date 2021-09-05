@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import { campusDatas } from '../lib/data'
 
 export default function Home() {
   return (
@@ -7,14 +9,24 @@ export default function Home() {
         <title>Kampusin</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to {' '}
-          <a className="text-blue-600" href="https://ninedotslabs.netlify.app/">
-            Kampusin
-          </a>
-        </h1>
+
+      <main>
+        <h1>Kampusin</h1>
       </main>
+
+      <div>
+        {campusDatas.map((item) => (
+          <div key={item.id} className="my-4">
+            <h2 className="font-bold">
+              <Link href={`campus/${item.id}`}>
+                <a>{item.name}</a>
+              </Link>
+            </h2>
+            <h3>{item.region}</h3>
+            <h3>{item.address}</h3>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
