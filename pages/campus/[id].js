@@ -1,6 +1,5 @@
-import Head from 'next/head'
-import { campusDatas } from '../../lib/data';
-
+import Head from "next/head";
+import { getAllContents } from "../../lib/data";
 
 export default function CampusPage({ name, region, address }) {
   return (
@@ -16,23 +15,24 @@ export default function CampusPage({ name, region, address }) {
         <h2>{address}</h2>
       </main>
     </div>
-  )
+  );
 }
 
 export async function getStaticProps(context) {
-    const { params } = context;
-    return {
-      props: campusDatas.find((campus) => campus.id === params.id), // will be passed to the page component as props
-    }
-  }
+  const { params } = context;
+  const allContents = getAllContents();
+  const content = allContents.find((item) => item.id === params.id);
+  return {
+    props: {
+      ...content.data,
+      // content: content.content
+    },
+  };
+}
 
 export async function getStaticPaths() {
   return {
-    paths: campusDatas.map((campus) => (
-        { params: 
-            { id: campus.id }
-        }
-    )),
-    fallback: false // See the "fallback" section below
+    paths: getAllContents().map((campus) => ({ params: { id: campus.id } })),
+    fallback: false, // See the "fallback" section below
   };
 }
