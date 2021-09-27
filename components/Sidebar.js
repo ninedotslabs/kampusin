@@ -95,11 +95,7 @@ export default function Sidebar() {
       </div>
     </div>
 
-    // <div className="flex flex-col">
-    //   <div className="grid h-screen w-2/5 fixed bg-gray-700 dark:bg-dark-grey">
-    //     <div className="mx-auto">
-    //       <h1 className="h-0 dark:text-white">This is a sidebar</h1>
-    //     </div>
+    // These code below is for the darkmode theme
     //     {colorTheme === "light" ? (
     //       <svg
     //         onClick={() => setColorTheme("light")}
@@ -132,9 +128,5 @@ export default function Sidebar() {
     //           d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
     //         />
     //       </svg>
-    //     )}
-    //     {/* <Footer /> */}
-    //   </div>
-    // </div>
   );
 }
