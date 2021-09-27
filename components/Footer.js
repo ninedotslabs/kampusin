@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Footer extends Component {
   render() {
     return (
-      <footer className="flex items-center justify-center w-full h-24">
+      <footer className="flex w-full justify-center h-24 dark:text-white">
         <p className="flex items-center justify-center">
           Created with&nbsp;
           <svg
@@ -18,7 +18,7 @@ export default class Footer extends Component {
               clipRule="evenodd"
             />
           </svg>
-          &nbsp; by
+          &nbsp;by
           <a href="">
             <img
               src="/ninedotslabs.png"

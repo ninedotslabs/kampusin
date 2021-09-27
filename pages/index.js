@@ -4,7 +4,6 @@ import Head from "next/head";
 import Sidebar from "../components/Sidebar";
 import Contents from "../components/Contents";
 
-
 export default function Home(props) {
   const [allData, setAllData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
@@ -28,20 +27,29 @@ export default function Home(props) {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div>
       <Head>
         <title>Kampusin</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/ndl.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+          rel="stylesheet"
+        ></link>
+        <script src="https://use.fontawesome.com/cb65137707.js"></script>
       </Head>
 
-      <main className="flex">
-        <Contents
-          data={filteredData}
-          filters={filters}
-          setFilters={setFilters}
-        />
+      <main className="font-body container-fluid mx-auto w-full box-border">
+        <div className="flex md:flex-row sm:flex-col flex-col w-full">
+          <Sidebar />
 
-        <Sidebar />
+          <Contents
+            data={filteredData}
+            filters={filters}
+            setFilters={setFilters}
+          />
+        </div>
       </main>
     </div>
   );
