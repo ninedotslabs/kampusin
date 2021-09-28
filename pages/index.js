@@ -1,33 +1,54 @@
-import Head from "next/head";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 import { getAllContents } from "../lib/data";
+import Head from "next/head";
+import Sidebar from "../components/Sidebar";
+import Contents from "../components/Contents";
 
 export default function Home(props) {
+  const [allData, setAllData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [filters, setFilters] = useState({
+    search: "",
+  });
+
+  useEffect(() => {
+    let datas = allData.filter(
+      (data) =>
+        data.name.toLowerCase().indexOf(filters.search.toLowerCase()) >= 0
+    );
+    setFilteredData(datas);
+    return () => {};
+  }, [filters]);
+
+  useEffect(() => {
+    setAllData(props.campus);
+    setFilteredData(props.campus);
+    return () => {};
+  }, []);
+
   return (
-    <div className="flex flex-col min-h-screen py-2">
+    <div>
       <Head>
         <title>Kampusin</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/ndl.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+          rel="stylesheet"
+        ></link>
+        <script src="https://use.fontawesome.com/cb65137707.js"></script>
       </Head>
 
-      <main>
-        <h1 className="text-6xl font-bold text-center mb-10">
-          Welcome to <span className="text-blue-400">Kampusin</span>
-        </h1>
-        <div className="grid justify-around">
-          {props.campus.map((item) => (
-            <div key={item.id} className="border-2 w-96 rounded-md mb-10">
-              <div className="p-10">
-                <h2 className=" text-xl font-bold hover:text-blue-400">
-                  <Link href={`campus/${item.id}`}>
-                    <a>{item.name}</a>
-                  </Link>
-                </h2>
-                <h3>{item.region}</h3>
-                <h3>{item.address}</h3>
-              </div>
-            </div>
-          ))}
+      <main className="font-body container-fluid mx-auto w-full box-border">
+        <div className="flex md:flex-row sm:flex-col flex-col w-full">
+          <Sidebar />
+
+          <Contents
+            data={filteredData}
+            filters={filters}
+            setFilters={setFilters}
+          />
         </div>
       </main>
     </div>
