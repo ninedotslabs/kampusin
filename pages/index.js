@@ -3,6 +3,7 @@ import { getAllContents } from "../lib/data";
 import Head from "next/head";
 import Sidebar from "../components/Sidebar";
 import Contents from "../components/Contents";
+import Footer  from "../components/Footer";
 
 export default function Home(props) {
   const [allData, setAllData] = useState([]);
@@ -43,13 +44,13 @@ export default function Home(props) {
       <main className="font-body container-fluid mx-auto w-full box-border">
         <div className="flex md:flex-row sm:flex-col flex-col w-full">
           <Sidebar />
-
           <Contents
             data={filteredData}
             filters={filters}
             setFilters={setFilters}
           />
         </div>
+        <Footer />
       </main>
     </div>
   );
