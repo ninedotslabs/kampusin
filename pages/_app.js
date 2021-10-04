@@ -3,11 +3,7 @@ import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
-
-      <Component {...pageProps} />
-
-    </div>
+    <Component {...pageProps} />
   );
 }
 
