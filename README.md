@@ -23,4 +23,4 @@ TLDR;
 `yarn dev` to start development
 
 ## Contribution
-We are open for contribution, moreover hacktoberfester!
+We are open for contribution, moreover hacktoberfester!. Follow [this](https://github.com/ninedotslabs/kampusin/blob/main/CONTRIBUTING.md)
