@@ -12,14 +12,14 @@ export default function Home({campus}) {
   });
 
   useEffect(() => {
-    let datas = campus.filter(
+    const data = campus.filter(
       (data) =>
         data.name.toLowerCase().includes(dataCampus.filters.toLowerCase()) ||
         data.tag.toLowerCase().includes(dataCampus.filters.toLowerCase())
     );
     setDataCampus({
       ...dataCampus,
-      filteredData: datas
+      filteredData: data
     });
     return () => {};
   }, [dataCampus.filters]);
