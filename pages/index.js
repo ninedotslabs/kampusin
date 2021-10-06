@@ -5,27 +5,24 @@ import Sidebar from "../components/Sidebar";
 import Contents from "../components/Contents";
 import Footer  from "../components/Footer";
 
-export default function Home(props) {
-  const [allData, setAllData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
-  const [filters, setFilters] = useState({
-    search: "",
+export default function Home({campus}) {
+  const [dataCampus, setDataCampus] = useState({
+    filteredData: [],
+    filters: ""
   });
 
   useEffect(() => {
-    let datas = allData.filter(
+    let datas = campus.filter(
       (data) =>
-        data.name.toLowerCase().indexOf(filters.search.toLowerCase()) >= 0
+        data.name.toLowerCase().includes(dataCampus.filters.toLowerCase()) ||
+        data.tag.toLowerCase().includes(dataCampus.filters.toLowerCase())
     );
-    setFilteredData(datas);
+    setDataCampus({
+      ...dataCampus,
+      filteredData: datas
+    });
     return () => {};
-  }, [filters]);
-
-  useEffect(() => {
-    setAllData(props.campus);
-    setFilteredData(props.campus);
-    return () => {};
-  }, []);
+  }, [dataCampus.filters]);
 
   return (
     <div>
@@ -33,7 +30,7 @@ export default function Home(props) {
         <title>Kampusin</title>
         <link rel="icon" href="/ndl.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link
           href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
           rel="stylesheet"
@@ -45,9 +42,9 @@ export default function Home(props) {
         <div className="flex md:flex-row sm:flex-col flex-col w-full">
           <Sidebar />
           <Contents
-            data={filteredData}
-            filters={filters}
-            setFilters={setFilters}
+            dataCampus={dataCampus}
+            data={dataCampus.filteredData}
+            setDataCampus={setDataCampus}
           />
         </div>
         <Footer />
