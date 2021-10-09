@@ -8,10 +8,6 @@ export default function Contents ({data, dataCampus, setDataCampus}) {
     })
   }
 
-  function imageHandler (url, e) {
-    Router.push(url);
-  }
-
   return (
     <div className="md:w-3/5 w-full bg-gray-200">
     <div className="w-full my-12">
@@ -36,7 +32,7 @@ export default function Contents ({data, dataCampus, setDataCampus}) {
                   <img src={item.image} className="w-20 mr-24 sm:mr-12 md:mr-6"></img>
                 </div>
                 <div>
-                  <h2 onClick={imageHandler.bind(this, item.url)} className="text-lg font-bold mb-3 cursor-pointer">
+                  <h2 onClick={() => Router.push(item.url)} className="text-lg font-bold mb-3 cursor-pointer">
                     {item.name}
                   </h2>
                   <h3 className="dark:text-white text-sm">{item.address}</h3>
