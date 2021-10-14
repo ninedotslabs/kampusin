@@ -1,4 +1,5 @@
 import Router from 'next/router';
+import Image from 'next/image';
 
 export default function Contents ({data, dataCampus, setDataCampus}) {
   function search (e) {
@@ -29,7 +30,7 @@ export default function Contents ({data, dataCampus, setDataCampus}) {
           >
               <div className="flex px-5 py-8">
                 <div>
-                  <img src={item.image} className="w-20 mr-24 sm:mr-12 md:mr-6"></img>
+                  <Image src={item.image} className="w-20 mr-24 sm:mr-12 md:mr-6"></img>
                 </div>
                 <div>
                   <h2 onClick={() => Router.push(item.url)} className="text-lg font-bold mb-3 cursor-pointer">
