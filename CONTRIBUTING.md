@@ -1,7 +1,7 @@
 # Do you want to contribute?
 
 1. Fork thir repo
-2. Go to folder \_content
+2. Go to folder _contents
 3. Create new file use `.md` extension, example `uinws.md`
 4. Use next template for content
 
