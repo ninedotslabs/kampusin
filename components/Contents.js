@@ -26,13 +26,13 @@ export default function Contents ({data, dataCampus, setDataCampus}) {
         data.map((item) => (
           <div
             key={item.id}
-            className="mx-auto w-11/12 bg-white mb-6 rounded shadow-content dark:bg-dark-grey"
+            className="mx-auto w-11/12 bg-white mb-6 rounded shadow-content dark:bg-dark-grey transform hover:translate-y-2 transition duration-300"
           >
               <div className="flex px-5 py-8">
-                <div>
-                  <img src={item.image} className="w-20 mr-24 sm:mr-12 md:mr-6" loading="lazy"></img>
+                <div className="w-1/6 mr-24 sm:mr-12 md:mr-6">
+                  <img src={item.image} className="h-20 mx-auto" loading="lazy"></img>
                 </div>
-                <div>
+                <div className="w-5/6">
                   <h2 onClick={() => Router.push(item.url)} className="text-lg font-bold mb-3 cursor-pointer">
                     {item.name}
                   </h2>
