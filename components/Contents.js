@@ -1,5 +1,4 @@
 import Router from 'next/router';
-import Image from 'next/image';
 
 export default function Contents ({data, dataCampus, setDataCampus}) {
   function search (e) {
