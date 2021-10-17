@@ -27,12 +27,12 @@ export default function Contents ({data, dataCampus, setDataCampus}) {
             key={item.id}
             className="mx-auto w-11/12 bg-white mb-6 rounded shadow-content dark:bg-dark-grey transform hover:translate-y-2 transition duration-300"
           >
-              <div className="flex px-5 py-8">
+              <div onClick={() => Router.push(item.url)} className="flex px-5 py-8 cursor-pointer">
                 <div className="w-1/6 mr-24 sm:mr-12 md:mr-6">
                   <img src={item.image} className="h-20 mx-auto" loading="lazy"></img>
                 </div>
                 <div className="w-5/6">
-                  <h2 onClick={() => Router.push(item.url)} className="text-lg font-bold mb-3 cursor-pointer">
+                  <h2 className="text-lg font-bold mb-3">
                     {item.name}
                   </h2>
                   <h3 className="dark:text-white text-sm">{item.address}</h3>
