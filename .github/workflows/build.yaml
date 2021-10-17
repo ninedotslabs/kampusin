@@ -25,4 +25,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/mrofisr/gocheck:latest
+          tags: ghcr.io/mrofisr/kampusin:latest
