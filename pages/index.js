@@ -3,7 +3,6 @@ import { getAllContents } from "../lib/data";
 import Head from "next/head";
 import Sidebar from "../components/Sidebar";
 import Contents from "../components/Contents";
-import Footer  from "../components/Footer";
 
 export default function Home({campus}) {
   const [dataCampus, setDataCampus] = useState({
@@ -47,7 +46,6 @@ export default function Home({campus}) {
             setDataCampus={setDataCampus}
           />
         </div>
-        <Footer />
       </main>
     </div>
   );

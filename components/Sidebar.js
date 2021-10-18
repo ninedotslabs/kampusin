@@ -1,4 +1,5 @@
 import useDarkMode from "../hooks/useDarkMode";
+import Footer from "./Footer";
 
 export default function Sidebar() {
   const [colorTheme, setColorTheme] = useDarkMode();
@@ -128,12 +129,11 @@ export default function Sidebar() {
 
           <div>
             <a href="https://github.com/ninedotslabs/kampusin/blob/main/CONTRIBUTING.md">
-            <div className="border rounded border-main-categories text-main-categories w-full py-3 transition duration-500 hover:bg-main-categories hover:text-white">
-              <p className="text-xs font-bold text-center">
-                Contribute now
-              </p>
-            </div>
-          </a></div>
+              <div className="border rounded border-main-categories text-main-categories w-full py-3 transition duration-500 hover:bg-main-categories hover:text-white">
+                <p className="text-xs font-bold text-center">Contribute now</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
