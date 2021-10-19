@@ -31,12 +31,11 @@ export default function Sidebar() {
             <a href="https://github.com/ninedotslabs/kampusin" target="_blank">
               <div className="flex border px-5 py-2 border-write shadow-write rounded absolute hover:top-1 text-main-write hover:bg-main-write hover:shadow-none hover:text-white">
                 <svg
-                  className="w-3 mr-1"
+                  className="w-3 mr-1 svg-inline--fa fa-pencil"
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
                   data-icon="pencil"
-                  class="svg-inline--fa fa-pencil"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -53,12 +52,11 @@ export default function Sidebar() {
             <a href="https://medium.com/nine-dots-labs" target="_blank">
               <div className="flex border px-5 py-2 border-blog shadow-blog rounded text-main-blog hover:bg-main-blog hover:text-white absolute hover:top-1 hover:shadow-none">
                 <svg
-                  className="w-3 mr-1"
+                  className="w-3 mr-1 svg-inline--fa fa-lightbulb"
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
                   data-icon="lightbulb"
-                  class="svg-inline--fa fa-lightbulb"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 384 512"
@@ -75,12 +73,11 @@ export default function Sidebar() {
             <a href="https://github.com/ninedotslabs" target="_blank">
               <div className="flex border px-3 py-2 border-github shadow-github rounded text-main-github hover:bg-main-github hover:text-white absolute hover:top-1 hover:shadow-none">
                 <svg
-                  className="w-4 mr-1"
+                  className="w-4 mr-1 svg-inline--fa fa-github"
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fab"
                   data-icon="github"
-                  class="svg-inline--fa fa-github"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 496 512"
@@ -97,12 +94,11 @@ export default function Sidebar() {
             <a href="https://discord.gg/AgpSktz" target="_blank">
               <div className="flex border px-3 py-2 border-discord shadow-discord rounded text-main-discord hover:bg-main-discord hover:text-white absolute hover:top-1 hover:shadow-none">
                 <svg
-                  className="w-4 mr-1 mx-auto"
+                  className="w-4 mr-1 mx-auto svg-inline--fa fa-discord"
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fab"
                   data-icon="discord"
-                  class="svg-inline--fa fa-discord"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 512"
