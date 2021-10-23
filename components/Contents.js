@@ -1,5 +1,5 @@
-import Router from "next/router";
-import Footer from "./Footer";
+import Router from 'next/router';
+import Footer from './Footer';
 
 export default function Contents({ data, dataCampus, setDataCampus }) {
   function search(e) {
@@ -23,13 +23,14 @@ export default function Contents({ data, dataCampus, setDataCampus }) {
             onChange={search}
           />
           {data.length > 0 ? (
-            data.map((item) => (
+            data.map(item => (
               <div
                 key={item.id}
                 className="mx-auto w-11/12 bg-white mb-6 rounded shadow-content dark:bg-dark-grey transform hover:translate-y-2 transition duration-300"
               >
-                <div
-                  onClick={() => Router.push(item.url)}
+                <a
+                  target="_blank"
+                  href={`${item.url}`}
                   className="flex px-5 py-8 cursor-pointer"
                 >
                   <div className="w-3/12 md:w-1/6 mr-5 sm:mr-12 md:mr-6">
@@ -43,7 +44,7 @@ export default function Contents({ data, dataCampus, setDataCampus }) {
                     <h2 className="text-lg font-bold mb-3">{item.name}</h2>
                     <h3 className="dark:text-white text-sm">{item.address}</h3>
                   </div>
-                </div>
+                </a>
               </div>
             ))
           ) : (
