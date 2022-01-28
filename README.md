@@ -20,7 +20,7 @@ TLDR;
 ```bash
 git clone https://github.com/ninedotslabs/kampusin.git
 cd kampusin
-yarn install # to install required libs
+yarn # to install required libs
 yarn dev # to start development
 ```
 
