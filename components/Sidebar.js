@@ -15,12 +15,12 @@ export default function Sidebar() {
             <a href="#" className="flex flex-row items-center mr-4">
               <img
                 src="/ndl.svg"
-                alt="Nine Dots Labs logo"
+                alt="NineDotsLabs logo"
                 className="w-20 mr-4 my-auto"
               ></img>
             </a>
             <div className="border border-primary shadow-default rounded p-4 w-full">
-              <h1 className="text-xl font-bold mb-2">Nine Dots Labs</h1>
+              <h1 className="text-xl font-bold mb-2">NineDotsLabs</h1>
               <p className="text-xs">
                 Engineer Comunity at UIN Walisongo Semarang
               </p>
