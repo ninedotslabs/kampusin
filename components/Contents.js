@@ -3,6 +3,7 @@ import Footer from './Footer';
 
 export default function Contents({ data, dataCampus, setDataCampus }) {
   function search(e) {
+    Router.replace(`?search=${e.target.value}`)
     setDataCampus({
       ...dataCampus,
       filters: e.target.value,
@@ -21,6 +22,7 @@ export default function Contents({ data, dataCampus, setDataCampus }) {
             type="text"
             placeholder="Search campus by name ..."
             onChange={search}
+            value={dataCampus.filters}
           />
           {data.length > 0 ? (
             data.map(item => (
@@ -38,6 +40,7 @@ export default function Contents({ data, dataCampus, setDataCampus }) {
                       src={item.image}
                       className="h-14 md:h-20 mx-auto"
                       loading="lazy"
+                      alt={item.image}
                     ></img>
                   </div>
                   <div className="w-9/12 md:w-5/6">
