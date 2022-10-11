@@ -22,7 +22,7 @@ export default function Sidebar() {
             <div className="border border-primary shadow-default rounded p-4 w-full">
               <h1 className="text-xl font-bold mb-2">NineDotsLabs</h1>
               <p className="text-xs">
-                Engineer Comunity at UIN Walisongo Semarang
+                Engineer Community at UIN Walisongo Semarang
               </p>
             </div>
           </div>
