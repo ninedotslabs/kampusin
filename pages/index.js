@@ -3,25 +3,31 @@ import { getAllContents } from "../lib/data";
 import Head from "next/head";
 import Sidebar from "../components/Sidebar";
 import Contents from "../components/Contents";
+import { useRouter } from "next/router";
 
 export default function Home({campus}) {
+  const {query} = useRouter()
   const [dataCampus, setDataCampus] = useState({
-    filteredData: [],
+    filteredData: campus,
     filters: ""
   });
 
   useEffect(() => {
-    const data = campus.filter(
-      (data) =>
-        data.name.toLowerCase().includes(dataCampus.filters.toLowerCase()) ||
-        data.tag.toLowerCase().includes(dataCampus.filters.toLowerCase())
-    );
-    setDataCampus({
-      ...dataCampus,
-      filteredData: data
-    });
-    return () => {};
-  }, [dataCampus.filters]);
+    if (query.search) {
+      const search = query.search?.toLowerCase() || dataCampus.filters.toLowerCase()
+      const data = campus.filter(
+        (data) =>
+          data.name.toLowerCase().includes(search) ||
+          data.tag.toLowerCase().includes(search)
+      );
+      setDataCampus({
+        ...dataCampus,
+        filteredData: data,
+        filters: query.search ?? ""
+      });
+      return () => {};
+    }
+  }, [query]);
 
   return (
     <div>
