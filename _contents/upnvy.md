@@ -1,5 +1,5 @@
 ---
-name: UPN Veteran Yogyakarta
+name: Universitas Pembangunan Nasional Veteran Yogyakarta
 accreditation: A
 region: D.I. Yogyakarta
 image: "https://yt3.ggpht.com/ytc/AMLnZu-0UXBOvxgF6Lnz9mNLmHjgfL06wM5ZgR6fx7GaUQ=s900-c-k-c0x00ffffff-no-rj"
