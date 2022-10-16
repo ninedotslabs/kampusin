@@ -1,14 +1,19 @@
-import Router from 'next/router';
-import Footer from './Footer';
+import Image from "next/image";
+import Router from "next/router";
+import Footer from "./Footer";
 
 export default function Contents({ data, dataCampus, setDataCampus }) {
   function search(e) {
-    Router.replace(`?search=${e.target.value}`)
+    Router.replace(`?search=${e.target.value}`);
     setDataCampus({
       ...dataCampus,
       filters: e.target.value,
     });
   }
+
+  const imgLoader = ({ src }) => {
+    return `https://images.weserv.nl/?url=${src}&w=150&q=70`;
+  };
 
   return (
     <div className="md:w-3/5 w-full bg-gray-200">
@@ -25,7 +30,7 @@ export default function Contents({ data, dataCampus, setDataCampus }) {
             value={dataCampus.filters}
           />
           {data.length > 0 ? (
-            data.map(item => (
+            data.map((item) => (
               <div
                 key={item.id}
                 className="mx-auto w-11/12 bg-white mb-6 rounded shadow-content dark:bg-dark-grey transform hover:translate-y-2 transition duration-300"
@@ -36,12 +41,16 @@ export default function Contents({ data, dataCampus, setDataCampus }) {
                   className="flex px-5 py-8 cursor-pointer"
                 >
                   <div className="w-3/12 md:w-1/6 mr-5 sm:mr-12 md:mr-6">
-                    <img
-                      src={item.image}
-                      className="h-14 md:h-20 mx-auto"
-                      loading="lazy"
-                      alt={item.image}
-                    ></img>
+                    <div className="relative w-full h-14 md:h-20">
+                      <Image
+                        src={item.image}
+                        loader={imgLoader}
+                        alt={`Logo ${item.name}`}
+                        layout="fill"
+                        objectFit="contain"
+                        className="mx-auto"
+                      />
+                    </div>
                   </div>
                   <div className="w-9/12 md:w-5/6">
                     <h2 className="text-lg font-bold mb-3">{item.name}</h2>
