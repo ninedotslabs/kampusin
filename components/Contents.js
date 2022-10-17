@@ -1,4 +1,3 @@
-import Router from 'next/router';
 import Footer from './Footer';
 
 export default function Contents({ data, dataCampus, setDataCampus }) {
