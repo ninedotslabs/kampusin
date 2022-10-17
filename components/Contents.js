@@ -16,7 +16,7 @@ export default function Contents({ data, dataCampus, setDataCampus }) {
   };
 
   return (
-    <div className="md:w-3/5 w-full bg-gray-200">
+    <div className="md:w-3/5 w-full bg-gray-200 md:mb-20">
       <div className="w-full my-12">
         <div className="flex flex-col right-0 w-full h-full">
           <h1 className="text-xl font-bold w-11/12 mx-auto text-center mb-10">
