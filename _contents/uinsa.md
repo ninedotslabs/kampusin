@@ -1,5 +1,5 @@
 ---
-name: Universitas Islam Negeri Sunan Ampel Surabaya
+name: Universitas Islam Negeri Sunan Ampel Surabaya (Uinsa)
 accreditation: A
 region: Surabaya
 image: "https://id.wikipedia.org/wiki/Universitas_Islam_Negeri_Sunan_Ampel_Surabaya#/media/Berkas:UIN_SUNAN_AMPEL.jpg"

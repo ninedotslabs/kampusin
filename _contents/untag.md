@@ -1,5 +1,5 @@
 ---
-name: Universitas 17 Agustus 1945 Surabaya
+name: Universitas 17 Agustus 1945 Surabaya (Untag)
 accreditation: A
 region: Surabaya
 image: "https://upload.wikimedia.org/wikipedia/id/thumb/5/5b/Logo_Untag_Surabaya.jpg/225px-Logo_Untag_Surabaya.jpg"
