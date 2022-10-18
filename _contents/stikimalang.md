@@ -1,5 +1,5 @@
 ---
-name: STIKI Malang
+name: Sekolah Tinggi Informatika dan Komputer Indonesia Malang
 accreditation: B
 region: Malang
 image: "https://lppm.stiki.ac.id/wp-content/uploads/sites/13/2016/07/logo-STIKI-PNG-297x300.png"
