@@ -1,5 +1,5 @@
 ---
-name: STMIK SINAR NUSANTARA
+name: Universitas Duta Bangsa
 accreditation: B
 region: Solo
 image: "https://udb.ac.id/storage/app/media/uploaded-files/LOGO---BOTTOM-TEXT.jpg"
