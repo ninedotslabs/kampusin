@@ -1,9 +1,9 @@
 ---
-name: Universitas Methodist Indonesia
-accreditation: B
-region: Medan
-image: "https://iili.io/QmwqfR.png"
-address: Jl Hang Tuah no 8, Madras Hulu Medan Polonia, Medan, 20151
-url: "https://www.methodist.ac.id/"
-tag: umi
+name: Universitas Muslim Indonesia
+accreditation: A
+region: Makassar
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Logo_Universitas_Muslim_Indonesia_Makassar.png/551px-Logo_Universitas_Muslim_Indonesia_Makassar.png"
+address: Jl. Urip Sumoharjo No.km.5, Panaikang, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90231
+url: "https://umi.ac.id/"
+tag: UMI
 ---
