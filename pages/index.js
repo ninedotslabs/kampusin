@@ -7,24 +7,19 @@ import { useRouter } from "next/router";
 
 export default function Home({campus}) {
   const {query} = useRouter()
-  const [dataCampus, setDataCampus] = useState({
-    filteredData: campus,
-    filters: ""
-  });
+  const [dataCampus, setDataCampus] = useState(campus);
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     if (query.search) {
-      const search = query.search?.toLowerCase() || dataCampus.filters.toLowerCase()
+      const search = query.search ? decodeURI(query.search.toLowerCase()) : ""
       const data = campus.filter(
         (data) =>
           data.name.toLowerCase().includes(search) ||
           data.tag.toLowerCase().includes(search)
       );
-      setDataCampus({
-        ...dataCampus,
-        filteredData: data,
-        filters: query.search ?? ""
-      });
+      setDataCampus(data);
+      setFilter(search);
       return () => {};
     }
   }, [query]);
@@ -47,9 +42,9 @@ export default function Home({campus}) {
         <div className="flex md:flex-row sm:flex-col flex-col w-full">
           <Sidebar />
           <Contents
-            dataCampus={dataCampus}
-            data={dataCampus.filteredData}
-            setDataCampus={setDataCampus}
+            data={dataCampus}
+            filter={filter}
+            setFilter={setFilter}
           />
         </div>
       </main>
