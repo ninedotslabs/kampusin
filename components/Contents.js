@@ -2,13 +2,10 @@ import Image from "next/image";
 import Router from "next/router";
 import Footer from "./Footer";
 
-export default function Contents({ data, dataCampus, setDataCampus }) {
+export default function Contents({ data, filter, setFilter }) {
   function search(e) {
-    Router.replace(`?search=${e.target.value}`);
-    setDataCampus({
-      ...dataCampus,
-      filters: e.target.value,
-    });
+    Router.replace(`?search=${encodeURI(e.target.value)}`, '', { scroll: false });
+    setFilter(e.target.value);
   }
 
   const imgLoader = ({ src }) => {
@@ -27,7 +24,7 @@ export default function Contents({ data, dataCampus, setDataCampus }) {
             type="text"
             placeholder="Search campus by name ..."
             onChange={search}
-            value={dataCampus.filters}
+            value={filter}
           />
           {data.length > 0 ? (
             data.map((item) => (
