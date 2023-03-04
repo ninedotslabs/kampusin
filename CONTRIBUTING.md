@@ -1,9 +1,12 @@
 # Do you want to contribute?
 
-1. Fork thir repo
-2. Go to folder _contents
-3. Create new file use `.md` extension, example `uinws.md`
-4. Use next template for content
+Thank you for considering contributing to our project! We welcome all contributions and appreciate your effort in making our project better.
+How to Contribute
+
+1. Fork the repository
+2. Go to the _contents folder
+3. Create a new file with the .md extension, for example, uinws.md
+4. Use the following template for content:
 
 ```markdown
 ---
@@ -30,3 +33,16 @@ url: "https://walisongo.ac.id/"
 tag: UINWS
 ---
 ```
+
+1. Fill in the details for the university you are adding.
+2. Save the file and commit the changes to your forked repository.
+3. Open a pull request (PR) to the main repository.
+
+Contribution Guidelines
+
+Before submitting your contribution, please make sure:
+
+1. The university you are adding is not already in the list.
+2. The details you provide are accurate and up-to-date.
+3. The format of the file is correct and matches the template.
+4. The image URL you provide is valid and the image is appropriate for all audiences.
